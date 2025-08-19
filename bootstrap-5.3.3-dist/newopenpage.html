@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Stylist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5efe7;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #e8dfd0;
+        }
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-image: url("https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=360");
+            background-size: cover;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: #b5663e;
+        }
+        .hero-text h1 span {
+            font-style: italic;
+            color: #333;
+        }
+        .hero-text p {
+            color: #666;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        .btn-custom {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+    
+        .image-stack {
+            position: relative;
+            width: 480px; /* Main container width */
+            height: 600px; /* Set height */
+        }
+        .image-stack img {
+            position: absolute;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-stack img:first-child {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .image-stack img:nth-child(2) {
+            width: 220px;
+            height: 320px;
+            top: 290px;
+            right:300px ;
+            z-index: 2; 
+        }
+        .image-stack img:last-child {
+            width: 200px; 
+            height: 250px;
+            bottom: 360px;
+            left: 350px; 
+            z-index: 3; 
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+        }
+        .image-stack:hover img:last-child {
+            transform: scale(1.1);
+        }
+        .image-stack:hover img:nth-child(2){
+            transform:scale(1.1) ;
+        }
+        .navitem1:hover{
+            background-color: tan;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">GO Fashion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item navitem1"><a class="nav-link" href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container hero-section">
+        <div class="image-stack">
+            <img src="https://images.unsplash.com/photo-1612722432474-b971cdcea546?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Stylist">
+            
+            <img src="https://images.unsplash.com/photo-1588824051376-0063738d61e0?q=80&w=1940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion Model">
+       
+            <img src="https://images.unsplash.com/photo-1518675970634-bdd3fe443f52?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fashion model2">
+        </div>
+
+        <div class="hero-text">
+            <h1>Find your <span>fashion’s fit</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <div class="form-container">
+                <h5>Sign up to book now</h5>
+                <button class="btn btn-custom"><a href="loginpage.html">USER</a></button>
+                <button class="btn btn-outline-dark">BUSINESS</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

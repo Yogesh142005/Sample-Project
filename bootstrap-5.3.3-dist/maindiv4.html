@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif;
+             background-color: #f9f6ed;
+              margin: 0;
+               padding: 0;
+             }
+        .navbar { 
+            background-color: #fff; 
+            box-shadow: 0 4px 2px -2px gray; 
+        }
+        .footer { 
+            background-color: #1a3b2f; 
+            color: white;
+             padding: 20px 0; }
+        .main-banner { 
+            position: relative;
+             margin-bottom: 30px; }
+        .main-banner img {
+             width: 100%;
+              height: auto; }
+        .banner-content {
+             position: absolute;
+              top: 50%; left: 50%; 
+              transform: translate(-50%, -50%); 
+              color: white; 
+              text-align: center; }
+        .appointment-section, .collection-section, .feature-section, .men-wear-section, .category-section {
+             margin: 40px 0; 
+             text-align: center;
+             }
+        .btn-dark { 
+            background-color: #1a3b2f; 
+            color: white;
+             border: none; 
+            }
+        .btn-dark:hover { 
+            background-color: #143026;
+         }
+        .collection-grid, .category-grid {
+             display: grid;
+              grid-template-columns: repeat(3, 1fr);
+               gap: 20px;
+                margin-top: 20px; }
+        .collection-item, .category-item {
+             background-color: #fff;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+              padding: 20px; 
+              text-align: center; 
+            }
+        .divfestive{
+            background-image: url("https://img.freepik.com/free-psd/natural-cosmetics-template-poster_23-2148671403.jpg?t=st=1742373704~exp=1742377304~hmac=6da461aaed8f438bec98f36ee51e1f8c91d3913acf82c24b7f0fda14d3a7dced&w=826");
+            background-size: cover;
+            height: 400px;
+     }
+     .divformal{
+    background-image: url("https://img.freepik.com/free-photo/businesswoman-stylish-eyeglasses-standing-beige-wall-blond-wavy-hairs-white-blouse-black-trousers_273443-1703.jpg?t=st=1742382510~exp=1742386110~hmac=dfdde6e6e5764f40d2abdabc7018ffc3cd1a22c91db9f8815c6ef04efad07ba2&w=1060");        
+    height: 400px;
+        background-size: cover;
+    }
+    .nav:hover{
+        background-color: tan;
+    }
+    .divbridal{
+        background-image: url("https://img.freepik.com/free-photo/authentic-indian-bride-groom-s-hands-holding-together-traditional-wedding-attire_8353-10049.jpg?t=st=1742379978~exp=1742383578~hmac=fa11b55e8d165a0e20db3526018121d9f06936ebfdcdcac06e72267dcfeb50b4&w=740");
+        background-size: cover;
+    }
+    .mainnav{
+        background-color: rgb(169, 141, 107);
+    }
+    .lehengasclass{
+        background-image: url("https://i.pinimg.com/736x/cd/7c/24/cd7c2455aaf00b0cc9d241c160aaa071.jpg");
+        background-size: cover;
+        height: 400px;
+        border-radius: 5px;
+    }
+    .sareeclass{
+        background-image: url("https://i.pinimg.com/736x/20/32/1d/20321d6a2e2f71864a7f7bf351b74e80.jpg");
+        background-size: cover;
+        height: 400px;
+        border-radius: 5px;
+    }
+    .kurtasclass{
+        background-image: url("https://i.pinimg.com/736x/53/f3/df/53f3df231b51b238e986086219ba3d67.jpg");
+        background-size: cover;
+        height: 400px;
+        border-radius: 5px;
+    }
+    .kurtasclass:hover,.lehengasclass:hover,.sareeclass:hover{
+        transform: scale(1.1);
+    }
+    .appointment-section { margin: 40px 0; text-align: center; }
+        .appointment-video { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg mainnav">
+        <div class="container">
+            <a class="navbar-brand brandname" href="#" ><strong>GO FASHION</strong></a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item nav"><a class="nav-link text-dark" href="#">Women</a></li>
+                <li class="nav-item nav"><a class="nav-link text-dark" href="#">Men</a></li>
+                <li class="nav-item nav"><a class="nav-link text-dark" href="#">Wedding</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-banner">
+        <div>
+            <div class="carousel slide" id="demo" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner" style="height:600px;">
+                    <div class="carousel-item active">
+                        <img src="https://img.freepik.com/free-photo/arrangement-black-friday-elements-with-copy-space_23-2148665532.jpg?t=st=1742374665~exp=1742378265~hmac=fb442eded1fb56e5fd7137243e719f38f67f440ed1878be7d9159a2968ffecb5&w=1380" style="width:cover" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://img.freepik.com/free-photo/gorgeous-woman-with-blonde-wavy-hair-wearing-elegant-beige-dress_273443-1756.jpg?t=st=1742375778~exp=1742379378~hmac=6f77d98141cadc6cd8c026920e8fdbb6ac6dd9d719c95ed364fd0f0f2d817870&w=1380" style="width:cover" class="d-block">
+    
+                    </div>
+                    <div class="carousel-item">     
+                        <img src="https://img.freepik.com/free-vector/new-collection-banner-template_1361-1325.jpg?t=st=1742379318~exp=1742382918~hmac=f990fa590d9c933bb2f92985477f2b72cafa43a356b573f242723a76a1fe26b3&w=1380" style="width:cover" class="d-block">
+                    </div>
+                </div>
+    
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousal-control-prev-icon"></span>
+                </button>
+                
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousal-control-next-icon"></span>
+                </button>
+            </div> 
+        </div>        <div class="banner-content">
+            <h1 class="text-light" style="font-family: Arial, Helvetica, sans-serif;">STEP INTO STYLE</h1>
+            <button class="btn btn-dark p-3"><h2 style="font-family: Arial, Helvetica, sans-serif;">Shop Now</h2></button>
+        </div>
+    </div>
+
+    <div class="collection-section">
+        <h2 class="m-5"><u>Exclusive Collections</u></h2>
+        <div class="collection-grid">
+            <div class="collection-item text-light divbridal" style="font-family: Georgia, 'Times New Roman', Times, serif;padding-top:190px;"><h1>Bridal Wear</h1></div>
+            <div class="collection-item divfestive text-light"><b><h2 style="font-family: Georgia, 'Times New Roman', Times, serif;padding-top:190px;"><h1>Festive Wear</h1></b></div>
+            <div class="collection-item divformal text-light"><h2 style="font-family: Georgia, 'Times New Roman', Times, serif;padding-top:190px;padding-left:180px"><h1>Formal Wear</h1></div>
+        </div>
+    </div>
+
+    <div class="men-wear-section">
+        <h2>Men's Wear</h2>
+        <p>Explore our exclusive collection for men.</p>
+        <button class="btn btn-dark">Shop Men's</button>
+    </div>
+
+    <div class="category-section">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-item sareeclass"><h1 class="text-light" style="font-family:Georgia, 'Times New Roman', Times, serif;padding-top:180px" >Sarees</h1></div>
+            <div class="category-item lehengasclass"><h1 class="text-light" style="font-family:Georgia, 'Times New Roman', Times, serif;padding-top:180px">Lehengas</h1></div>
+            <div class="category-item kurtasclass"><h1 class="text-light" style="font-family: Georgia, 'Times New Roman', Times, serif;padding-top:180px">Kurtas</h1></div>
+        </div>
+    </div>
+
+    
+    <div class="appointment-section">
+        <h2>Schedule an Appointment</h2>
+        <p>Click below to schedule a virtual or in-store appointment at one of our flagship stores.</p>
+        <div class="container">
+            <video class="appointment-video" autoplay muted>
+                <source src="https://videos.pexels.com/video-files/2047965/2047965-hd_1280_720_30fps.mp4" type="video/mp4">
+            </video>
+        </div>
+        <button class="btn btn-primary mt-3">Book Now</button>
+    </div>
+    
+    <footer class="footer text-center">
+        <div class="container">
+            <p>© 2024 House of GO FASHION Private Limited. All Rights Reserved.</p>
+            <p>Contact: +91 99993 13366 | Email Us | Store Locator</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

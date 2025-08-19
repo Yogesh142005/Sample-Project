@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dressing Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #faf7f3;
+            font-family: Arial, sans-serif;
+        }
+        .dressing-room {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+        .avatar img {
+            width: 100%;
+        }
+        .btn-toggle {
+            margin-bottom: 15px;
+        }
+        .item-grid img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .skin-tone {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .skin-tone div {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #1a3b2f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Revery’s virtual dressing room.</h2>
+        <div class="dressing-room row">
+            <div class="col-md-5 text-center">
+                <button class="btn btn-light btn-toggle">Male</button>
+                <button class="btn btn-dark btn-toggle">Female</button>
+                <div class="avatar mt-3">
+                    <img src="https://via.placeholder.com/300" alt="Avatar">
+                </div>
+                <div class="skin-tone mt-3">
+                    <div style="background: #c08b5c;"></div>
+                    <div style="background: #a36b3b;"></div>
+                    <div style="background: #6b4226;"></div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <nav class="nav nav-tabs mb-3">
+                    <a class="nav-link active" href="#">Top</a>
+                    <a class="nav-link" href="#">Bottom</a>
+                    <a class="nav-link" href="#">Outerwear</a>
+                    <a class="nav-link" href="#">Dress</a>
+                </nav>
+                <div class="row item-grid">
+                    <div class="col-6 col-md-4 mb-3">
+                        <video>
+                            <source src="" type="video/">
+                        </video>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="https://i.pinimg.com/736x/11/4e/f3/114ef39056901c75ccac31c006ff4a14.jpg" alt="Item">
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="https://i.pinimg.com/736x/19/19/15/191915c8aab1dcf71bb41312c1ba9c53.jpg" alt="Item">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <button class="btn btn-outline-dark">View Saved (0)</button>
+                    <button class="btn btn-dark">Buy Items</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2024 Virtual Dressing Room. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
